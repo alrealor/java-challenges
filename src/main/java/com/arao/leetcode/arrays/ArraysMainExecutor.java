@@ -16,6 +16,7 @@ public class ArraysMainExecutor {
                 "\n7 - Plus one (Excercise7)" +
                 "\n8 - Move Zeroes (Excercise8)" +
                 "\n9 - Two Sum (Excercise9)" +
+                "\n11 - Rotate image (Excercise11)" +
                 "\nChoose your menu number option: ");
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
@@ -30,9 +31,24 @@ public class ArraysMainExecutor {
             case 7 -> plusOne();
             case 8 -> moveZeroes();
             case 9 -> twoSum();
+            case 11 -> rotateImage();
         }
     }
 
+    /**/
+    private static void rotateImage(){
+        Excercise11 ex11 = new Excercise11();
+        int[][] matrix = new int[][] {{5,1,9,11}, {2,4,8,10}, {13,3,6,7}, {15,14,12,16}};
+        int[][] expected = new int[][] {{15,13,2,5},{14,3,4,1},{12,6,8,9},{16,7,10,11}};
+        System.out.print("Original matrix: ");
+        ArrayCommons.printMatrix(matrix);
+        System.out.print("\nMatrix rotated at right: ");
+        ArrayCommons.printMatrix(ex11.rotate(matrix));
+        System.out.print("\nExpected output: ");
+        ArrayCommons.printMatrix(expected);
+    }
+
+    /**/
     private static void twoSum(){
         Excercise9 ex9 = new Excercise9();
         int[] array = new int[] {0,-3,1,8,3};
