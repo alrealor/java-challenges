@@ -7,16 +7,17 @@ public class ArraysMainExecutor {
     public static void main(String... args) {
 
         System.out.print("Array Menu Options" +
-                "\n1 - Remove duplicates from sorted array (Excercise1)" +
-                "\n2 - Best time to buy and sell (Excercise2)" +
-                "\n3 - Rotate array (Excercise3)" +
-                "\n4 - Contain duplicate (Excercise4)" +
-                "\n5 - Single number (Excercise5)" +
-                "\n6 - Intersection of two arrays (Excercise6)" +
-                "\n7 - Plus one (Excercise7)" +
-                "\n8 - Move Zeroes (Excercise8)" +
-                "\n9 - Two Sum (Excercise9)" +
-                "\n11 - Rotate image (Excercise11)" +
+                "\n1 - Remove duplicates from sorted array [Excercise1]" +
+                "\n2 - Best time to buy and sell [Excercise2]" +
+                "\n3 - Rotate array [Excercise3]" +
+                "\n4 - Contain duplicate [Excercise4]" +
+                "\n5 - Single number [Excercise5]" +
+                "\n6 - Intersection of two arrays [Excercise6]" +
+                "\n7 - Plus one [Excercise7]" +
+                "\n8 - Move Zeroes [Excercise8]" +
+                "\n9 - Two Sum [Excercise9]" +
+                "\n10 - Valid Sudoku [Excercise10]" +
+                "\n11 - Rotate image [Excercise11]" +
                 "\nChoose your menu number option: ");
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
@@ -31,8 +32,40 @@ public class ArraysMainExecutor {
             case 7 -> plusOne();
             case 8 -> moveZeroes();
             case 9 -> twoSum();
+            case 10 -> validSudoku();
             case 11 -> rotateImage();
         }
+    }
+
+    /**/
+    private static void validSudoku(){
+        Excercise10 ex10 = new Excercise10();
+        char[][] matrix1 = new char[][] {{'5','3','.','.','7','.','.','.','.'}
+                                        ,{'6','.','.','1','9','5','.','.','.'}
+                                        ,{'.','9','8','.','.','.','.','6','.'}
+                                        ,{'8','.','.','.','6','.','.','.','3'}
+                                        ,{'4','.','.','8','.','3','.','.','1'}
+                                        ,{'7','.','.','.','2','.','.','.','6'}
+                                        ,{'.','6','.','.','.','.','2','8','.'}
+                                        ,{'.','.','.','4','1','9','.','.','5'}
+                                        ,{'.','.','.','.','8','.','.','7','9'}};
+        System.out.print("\nSudoku is " + (ex10.isValidSudoku(matrix1) ? "valid" : "invalid"));
+        ArrayCommons.printMatrix(matrix1);
+        System.out.print("Expected output: Sudoku is valid");
+
+        // invalid sudoku
+        char[][] matrix2 = new char[][] {{'8','3','.','.','7','.','.','.','.'}
+                                        ,{'6','.','.','1','9','5','.','.','.'}
+                                        ,{'.','9','8','.','.','.','.','6','.'}
+                                        ,{'8','.','.','.','6','.','.','.','3'}
+                                        ,{'4','.','.','8','.','3','.','.','1'}
+                                        ,{'7','.','.','.','2','.','.','.','6'}
+                                        ,{'.','6','.','.','.','.','2','8','.'}
+                                        ,{'.','.','.','4','1','9','.','.','5'}
+                                        ,{'.','.','.','.','8','.','.','7','9'}};
+        System.out.print("\n\nSudoku is " + (ex10.isValidSudoku(matrix2) ? "valid" : "invalid"));
+        ArrayCommons.printMatrix(matrix2);
+        System.out.print("Expected output: Sudoku is invalid");
     }
 
     /**/
