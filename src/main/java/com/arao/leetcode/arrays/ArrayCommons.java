@@ -10,6 +10,14 @@ public class ArrayCommons {
         System.out.print("]");
     }
 
+    public static void printArray(char[] items) {
+        System.out.print("[");
+        for(int x=0; x<items.length; x++) {
+            System.out.print(x != items.length-1 ? items[x] + "," : items[x]);
+        }
+        System.out.print("]");
+    }
+
     public static void printMatrix(int[][] matrix) {
         System.out.println("");
         // loop the matrix rows
