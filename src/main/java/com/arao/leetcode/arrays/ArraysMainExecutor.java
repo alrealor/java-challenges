@@ -34,6 +34,7 @@ public class ArraysMainExecutor {
             case 9 -> twoSum();
             case 10 -> validSudoku();
             case 11 -> rotateImage();
+            default -> System.out.println("Invalid option, exit");
         }
     }
 

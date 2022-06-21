@@ -12,15 +12,14 @@ import java.util.Set;
  * Each row must contain the digits 1-9 without repetition.
  * Each column must contain the digits 1-9 without repetition.
  * Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
- * Note:
  *
+ * Note:
  * A Sudoku board (partially filled) could be valid but is not necessarily solvable.
  * Only the filled cells need to be validated according to the mentioned rules.
  *
- *
  * Example 1:
  * Input: board =
- * [["5","3",".",".","7",".",".",".","."]
+ * [ ["5","3",".",".","7",".",".",".","."]
  *  ,["6",".",".","1","9","5",".",".","."]
  *  ,[".","9","8",".",".",".",".","6","."]
  *  ,["8",".",".",".","6",".",".",".","3"]
@@ -86,8 +85,9 @@ public class Excercise10 {
         // 	7mo - 60, 61, 62, 70, 71, 72, 80, 81, 82
         // 	8vo - 63, 64, 65, 73, 74, 75, 83, 84, 85
         // 	9no - 66, 67, 68, 76, 77, 78, 86, 87, 88
-        int lr = 0, lc = 0;
-        int count = 1, loop = 1;
+
+        // verify 3x3 sub-matrix
+        int lr=0, lc=0, count=1, loop=1;
         while(loop <= ((board.length * board[0].length) / 9)) {
             for(int r=lr; r<lr+3; r++) {
                 for(int c=lc; c<lc+3; c++) {
