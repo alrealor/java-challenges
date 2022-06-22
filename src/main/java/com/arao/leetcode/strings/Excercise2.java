@@ -27,10 +27,18 @@ public class Excercise2 {
 
     /**
      * Reverse number given an input integer, if input number pass the limits of integer return 0
+     * Java reverse an int value - Pseudocode:
+     *  1. Extract off the rightmost digit of your input number. (1234 % 10) = 4
+     *  2. Take that digit (4) and add it into a new reversedNum.
+     *  3. Multiply reversedNum by 10 (4 * 10) = 40, this exposes a zero to the right of your (4).
+     *  4. Divide the input by 10, (removing the rightmost digit). (1234 / 10) = 123
+     *  5. Repeat at step a with 123
+     *
      * @param x - integer number
      * @return reversed integer
      */
     public int reverseInteger(int x) {
+
         long reversed = 0;
         while(x !=0 ) {
             // reversed = reversed * 10 + rightmost digit of the input
