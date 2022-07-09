@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java-challenge" />
         <module name="java_challenges" />
+        <module name="java-challenges" />
       </profile>
     </annotationProcessing>
   </component>
