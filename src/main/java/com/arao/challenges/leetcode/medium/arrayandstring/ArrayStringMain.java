@@ -23,9 +23,13 @@ public class ArrayStringMain {
     }
 
     private static void threeSum() {
-        int[] array = new int[] {-1, 0, 1, 2, -1, -4};
+//        int[] array = new int[] {-1, 0, 1, 2, -1, -4};
+//        int[] array = new int[] {0,0,0,0};
+        int[] array = new int[] {0,1,1};
         Excercise1 ex1 = new Excercise1();
-        ex1.threeSum(array).forEach(System.out::println);
+        System.out.println("Expected result: [-1, 0, 1][-1, -1, 2]");
+        System.out.print("Output: ");
+        ex1.threeSum(array).forEach(System.out::print);
     }
 
     private static void longestSubWithoutRepeatingChars() {
