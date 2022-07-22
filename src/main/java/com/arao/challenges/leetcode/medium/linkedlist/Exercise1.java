@@ -41,7 +41,7 @@ public class Exercise1 {
                 temp.val = sum;
                 carry = 0;
             }
-            // verify if any of the two nodes has next
+            // verify if any of the two nodes has next to continue
             if (l1.next != null || l2.next != null) {
                 // create new node and point out temp to this
                 temp.next = new ListNode();

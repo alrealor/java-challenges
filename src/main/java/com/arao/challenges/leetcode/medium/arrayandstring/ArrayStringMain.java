@@ -7,18 +7,25 @@ public class ArrayStringMain {
 
     public static void main(String[] args) {
 
-        System.out.print("Menu \n " +
+        System.out.print("Menu \n" +
+                "  1. 3Sum (Ex1) \n" +
                 "  4. Longest Substring Without Repeating Characters (Ex4) \n" +
                 "Pick up your option: ");
         Scanner scan = new Scanner(System.in);
         int option = scan.nextInt();
 
         switch(option) {
-            case 4: longestSubWithoutRepeatingChars();
-            default:
-                System.out.println("Invalid option, exit");
+            case 1 -> threeSum();
+            case 4 -> longestSubWithoutRepeatingChars();
+            default -> System.out.println("Invalid option, exit");
         }
 
+    }
+
+    private static void threeSum() {
+        int[] array = new int[] {-1, 0, 1, 2, -1, -4};
+        Excercise1 ex1 = new Excercise1();
+        ex1.threeSum(array).forEach(System.out::println);
     }
 
     private static void longestSubWithoutRepeatingChars() {
